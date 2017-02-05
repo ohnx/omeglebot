@@ -49,7 +49,7 @@ class OmegleHandler(object):
 
     def stopped_typing(self):
         """ Called when the user stop typing a message """
-        sendme('##ohnx', 'Stranger has stopped typing.')
+        # sendme('##ohnx', 'Stranger has stopped typing.')
     
     def message(self, message):
         """ Called when a message is received from the connected stranger """
@@ -97,7 +97,7 @@ class OmegleHandler(object):
         pass
 
 h = OmegleHandler(loop=False)           # session loop
-c = OmegleClient(h, wpm=47, lang='en', topics=['ohnxxx'])  # 47 words per minute
+c = OmegleClient(h, wpm=47, lang='en', topics=[])  # 47 words per minute
 c.start()
 
 lulz = ''
